@@ -5,6 +5,11 @@ with limits, Stripe billing and an audit log. Django REST backend, Next.js front
 
 Built by [Devomio](https://devomio.com/) as an open starting point for multi-tenant products.
 
+**Live demo: [teambase.devomio.com](https://teambase.devomio.com/)**. Click "Try the demo" to open a
+sample company with a team, projects and activity. No sign-up needed.
+
+![The team page of the TeamBase demo: seats, members with roles, and a pending invitation](docs/screenshot.png)
+
 ## What is included
 
 - **Organisations as tenants.** Every record belongs to an organisation, and every API query is

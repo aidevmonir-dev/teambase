@@ -44,7 +44,9 @@ export function Select({ label, children, ...props }: SelectHTMLAttributes<HTMLS
 }
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <section className={`rounded-2xl border border-line bg-white p-6 ${className}`}>{children}</section>;
+  // Callers pass "p-0" for edge-to-edge lists; only add the default padding when they set none.
+  const padding = /(^|\s)p-\d/.test(className) ? "" : "p-6";
+  return <section className={`overflow-hidden rounded-2xl border border-line bg-white ${padding} ${className}`}>{children}</section>;
 }
 
 export function Notice({ kind = "info", children }: { kind?: "info" | "error" | "success"; children: ReactNode }) {
