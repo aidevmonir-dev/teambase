@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Devomio palette: navy ink, coral action. Used through Tailwind as bg-navy, text-coral, etc. */
+@theme {
+  --color-navy: #213343;
+  --color-ink: #1c2b39;
+  --color-muted: #5b6b7b;
+  --color-line: #d9e0e6;
+  --color-page: #f5f7f9;
+  --color-coral: #ff7a59;
+  --color-coral-dark: #e8603f;
+  --color-good: #1b6e4b;
+  --color-good-bg: #e7f4ec;
+  --color-bad: #b3261e;
+  --color-bad-bg: #fdecea;
+  --font-sans: var(--font-inter), "Segoe UI", Arial, sans-serif;
+  --font-display: var(--font-sora), "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
